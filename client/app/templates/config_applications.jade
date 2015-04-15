@@ -7,7 +7,8 @@
                     h4= t('hardware consumption')
                     .disk-space.mt2
                         .line
-                            img(src="img/hard-drive.png")
+                            svg(viewBox="0 0 64 64", xmlns="http://www.w3.org/2000/svg", class="icon icon--hard-drive")
+                                use(xlink:href="img/sprites.svg#icon-hard-drive")
                         .line
                             span.amount 0
                             |  / 
@@ -15,7 +16,8 @@
                             |  #{t('hard drive gigabytes')}
                     .memory-free.mt2
                         .line
-                            img(src="img/ram.png")
+                            svg(viewBox="0 0 64 64", xmlns="http://www.w3.org/2000/svg", class="icon icon--ram")
+                                use(xlink:href="img/sprites.svg#icon-ram")
                         .line
                             span.amount 0
                             |  / 

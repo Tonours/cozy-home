@@ -3,33 +3,63 @@ header#header.navbar
 .home-body
   #app-frames
   #content
-    #home-menu.mt3
-        .txtright.menu-btn.home-icon
-            a(href="#home")
-                span= t('your app list')
-                img(src="img/home-black.png")
-        .txtright.menu-btn
-            a(href="#applications")
-                span= t('choose your apps')
-                img(src="img/store.png")
-        .txtright.menu-btn
-            a(href="#config-applications")
-                span= t('manage your apps')
-                img(src="img/apps.png")
-        .txtright.menu-btn.customize-icon
-            a(href="#customize")
-                span= t('customize your cozy')
-                img(src="img/config-apps.png")
-        .txtright.menu-btn
-            a(href="#account")
-                span= t('configure your cozy')
-                img(src="img/configuration.png")
-        .txtright.menu-btn.help-icon
-            a(href="#help")
-                span= t('ask for assistance')
-                img(src="img/help.png")
-        .txtright.menu-btn.logout-menu-icon
-            a(href="#logout")
-                span= t('sign out')
-                img(src="img/logout-black.png")
+    //- #home-menu.mt3
+    //-     .txtright.menu-btn.home-icon
+    //-         a(href="#home")
+    //-             span= t('your app list')
+    //-             img(src="img/home-black.png")
+    //-     .txtright.menu-btn
+    //-         a(href="#applications")
+    //-             span= t('choose your apps')
+    //-             svg(viewBox="0 0 120 120", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--apps")
+    //-                 use(xlink:href="img/sprites.svg#icon-apps")
+    //-     .txtright.menu-btn
+    //-         a(href="#config-applications")
+    //-             span= t('manage your apps')
+    //-             img(src="img/apps.png")
+    //-     .txtright.menu-btn.customize-icon
+    //-         a(href="#customize")
+    //-             span= t('customize your cozy')
+    //-             img(src="img/config-apps.png")
+    //-     .txtright.menu-btn
+    //-         a(href="#account")
+    //-             span= t('configure your cozy')
+    //-             img(src="img/configuration.png")
+    //-     .txtright.menu-btn.help-icon
+    //-         a(href="#help")
+    //-             span= t('ask for assistance')
+    //-             img(src="img/help.png")
+    //-     .txtright.menu-btn.logout-menu-icon
+    //-         a(href="#logout")
+    //-             span= t('sign out')
+    //-             img(src="img/logout-black.png")
+    #home-menu.mt3.menu--home
+        a(href="#home", class="menu__item home-icon txtright")
+            span.menu__title= t('your app list')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--home")
+                use(xlink:href="img/sprites.svg#icon-home")
+        a(href="#applications", class="menu__item txtright")
+            span.menu__title= t('choose your apps')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--shop")
+                use(xlink:href="img/sprites.svg#icon-shop")
+        a(href="#config-applications", class="menu__item txtright")
+            span.menu__title= t('manage your apps')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--apps")
+                use(xlink:href="img/sprites.svg#icon-apps")
+        a(href="#customize", class="menu__item customize-icon txtright")
+            span.menu__title= t('customize your cozy')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--app-config")
+                use(xlink:href="img/sprites.svg#icon-config-apps")
+        a(href="#account", class="menu__item txtright")
+            span.menu__title= t('configure your cozy')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--configuration")
+                use(xlink:href="img/sprites.svg#icon-configuration")
+        a(href="#help", class="menu__item help-icon txtright")
+            span.menu__title= t('ask for assistance')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--help")
+                use(xlink:href="img/sprites.svg#icon-help")
+        a(href="#logout", class="menu__item logout-menu-icon txtright")
+            span.menu__title= t('sign out')
+            svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="menu__icon menu__icon--logout")
+                use(xlink:href="img/sprites.svg#icon-logout")
     #home-content

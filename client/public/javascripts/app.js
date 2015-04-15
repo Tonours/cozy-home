@@ -2163,10 +2163,10 @@ module.exports = MainRouter = (function(_super) {
 
   MainRouter.prototype.selectIcon = function(index) {
     if (index !== -1) {
-      $('.menu-btn.active').removeClass('active');
-      $($('.menu-btn').get(index)).addClass('active');
+      $('.menu__item.active').removeClass('active');
+      $($('.menu__item').get(index)).addClass('active');
     } else {
-      $('.menu-btn.active').removeClass('active');
+      $('.menu__item.active').removeClass('active');
     }
     if (index !== 3) {
       return app.mainView.applicationListView.setMode('view');
@@ -2353,9 +2353,7 @@ buf.push('<span class="state-label">' + escape((interp = app.state) == null ? ''
 }
 if ( app.needsUpdate)
 {
-buf.push('<span>&nbsp;</span><img');
-buf.push(attrs({ 'width':(16), 'src':("img/notification-orange.png"), 'title':("" + (t('update required')) + ""), 'alt':("" + (t('update required')) + ""), "class": ('update-notification-icon') }, {"width":true,"src":true,"title":true,"alt":true}));
-buf.push('/>');
+buf.push('<span>&nbsp;</span><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="update-notification-icon"><use xlink:href="img/sprites.svg#icon-notification"></use></svg>');
 }
 buf.push('</span><div class="buttons right"><span class="smaller"><input');
 buf.push(attrs({ 'type':("checkbox"), 'title':("always on"), 'checked':("checked"), 'name':("app-stoppable-" + (app.id) + ""), "class": ("app-stoppable") }, {"class":true,"type":true,"title":true,"checked":true,"name":true}));
@@ -2373,9 +2371,7 @@ buf.push(escape(null == __val__ ? "" : __val__));
 buf.push('</span></button></div><div class="comments">');
 if ( app.comment === 'official application')
 {
-buf.push('<img');
-buf.push(attrs({ 'src':("img/happycloud-black.svg"), 'alt':("" + (t(app.comment)) + ""), 'width':("20") }, {"src":true,"alt":true,"width":true}));
-buf.push('/>');
+buf.push('<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="20"><use xlink:href="img/sprites.svg#icon-happycloud"></use></svg>');
 }
 buf.push('<a');
 buf.push(attrs({ 'href':("" + (app.website) + "") }, {"href":true}));
@@ -2408,7 +2404,7 @@ var interp;
 buf.push('<!--.section-title.darkbg.bigger apps--><div class="txt-center"><div class="line w800"><div class="mod w33 left"><div class="sys-infos line"><div class="mod center-txt"><h4>');
 var __val__ = t('hardware consumption')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</h4><div class="disk-space mt2"><div class="line"><img src="img/hard-drive.png"/></div><div class="line"><span class="amount">0</span> / <span class="total">0</span> ' + escape((interp = t('hard drive gigabytes')) == null ? '' : interp) + '</div></div><div class="memory-free mt2"><div class="line"><img src="img/ram.png"/></div><div class="line"><span class="amount">0</span> / <span class="total">0</span> ' + escape((interp = t('memory megabytes')) == null ? '' : interp) + '</div></div><h4>');
+buf.push('</h4><div class="disk-space mt2"><div class="line"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="icon icon--hard-drive"><use xlink:href="img/sprites.svg#icon-hard-drive"></use></svg></div><div class="line"><span class="amount">0</span> / <span class="total">0</span> ' + escape((interp = t('hard drive gigabytes')) == null ? '' : interp) + '</div></div><div class="memory-free mt2"><div class="line"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="icon icon--ram"><use xlink:href="img/sprites.svg#icon-ram"></use></svg></div><div class="line"><span class="amount">0</span> / <span class="total">0</span> ' + escape((interp = t('memory megabytes')) == null ? '' : interp) + '</div></div><h4>');
 var __val__ = t('cozy platform')
 buf.push(escape(null == __val__ ? "" : __val__));
 buf.push('</h4><div class="stack-app mt2"><div class="line"><span class="app">Data System: </span><span class="data-system">--</span></div><div class="line"><span class="app">Proxy: </span><span class="proxy">--</span></div><div class="line"><span class="app">Home: </span><span class="home">--</span></div><div class="line"><span class="app">Controller: </span><span class="controller">--</span></div><div class="line buttons"><button class="btn update-stack">');
@@ -2573,28 +2569,28 @@ attrs = attrs || jade.attrs; escape = escape || jade.escape; rethrow = rethrow |
 var buf = [];
 with (locals || {}) {
 var interp;
-buf.push('<header id="header" class="navbar"></header><div class="home-body"><div id="app-frames"></div><div id="content"><div id="home-menu" class="mt3"><div class="txtright menu-btn home-icon"><a href="#home"><span>');
+buf.push('<header id="header" class="navbar"></header><div class="home-body"><div id="app-frames"></div><div id="content"><div id="home-menu" class="mt3 menu--home"><a href="#home" class="menu__item home-icon txtright"><span class="menu__title">');
 var __val__ = t('your app list')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/home-black.png"/></a></div><div class="txtright menu-btn"><a href="#applications"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--home"><use xlink:href="img/sprites.svg#icon-home"></use></svg></a><a href="#applications" class="menu__item txtright"><span class="menu__title">');
 var __val__ = t('choose your apps')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/store.png"/></a></div><div class="txtright menu-btn"><a href="#config-applications"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--shop"><use xlink:href="img/sprites.svg#icon-shop"></use></svg></a><a href="#config-applications" class="menu__item txtright"><span class="menu__title">');
 var __val__ = t('manage your apps')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/apps.png"/></a></div><div class="txtright menu-btn customize-icon"><a href="#customize"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--apps"><use xlink:href="img/sprites.svg#icon-apps"></use></svg></a><a href="#customize" class="menu__item customize-icon txtright"><span class="menu__title">');
 var __val__ = t('customize your cozy')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/config-apps.png"/></a></div><div class="txtright menu-btn"><a href="#account"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--app-config"><use xlink:href="img/sprites.svg#icon-config-apps"></use></svg></a><a href="#account" class="menu__item txtright"><span class="menu__title">');
 var __val__ = t('configure your cozy')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/configuration.png"/></a></div><div class="txtright menu-btn help-icon"><a href="#help"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--configuration"><use xlink:href="img/sprites.svg#icon-configuration"></use></svg></a><a href="#help" class="menu__item help-icon txtright"><span class="menu__title">');
 var __val__ = t('ask for assistance')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/help.png"/></a></div><div class="txtright menu-btn logout-menu-icon"><a href="#logout"><span>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--help"><use xlink:href="img/sprites.svg#icon-help"></use></svg></a><a href="#logout" class="menu__item logout-menu-icon txtright"><span class="menu__title">');
 var __val__ = t('sign out')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/logout-black.png"/></a></div></div><div id="home-content"></div></div></div>');
+buf.push('</span><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="menu__icon menu__icon--logout"><use xlink:href="img/sprites.svg#icon-logout"></use></svg></a></div><div id="home-content"></div></div></div>');
 }
 return buf.join("");
 };
@@ -2685,10 +2681,10 @@ attrs = attrs || jade.attrs; escape = escape || jade.escape; rethrow = rethrow |
 var buf = [];
 with (locals || {}) {
 var interp;
-buf.push('<div class="navbar clearfix"><a href="#home" class="logo left"><img src="img/happycloud-white.svg"/><span>beta</span></a><div id="menu-applications-container" class="left"></div><a id="logout-button" href="#logout" class="right"><span>');
+buf.push('<div class="navbar clearfix"><a href="#home" class="logo left"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="icon icon--logo"><use xlink:href="img/sprites.svg#icon-happycloud"></use></svg><span>beta</span></a><div id="menu-applications-container" class="left"></div><a id="logout-button" href="#logout" class="right"><span>');
 var __val__ = t('logout')
 buf.push(escape(null == __val__ ? "" : __val__));
-buf.push('</span><img src="img/logout-white.png"/></a><div id="notifications-container" class="right"></div></div>');
+buf.push('</span><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="icon icon--logout"><use xlink:href="img/sprites.svg#icon-logout"></use></svg></a><div id="notifications-container" class="right"></div></div>');
 }
 return buf.join("");
 };
@@ -2728,7 +2724,7 @@ attrs = attrs || jade.attrs; escape = escape || jade.escape; rethrow = rethrow |
 var buf = [];
 with (locals || {}) {
 var interp;
-buf.push('<a id="notifications-toggle"><span class="backcolor"></span><img src="img/notification-white.png"/><span id="notifications-counter"></span></a><audio id="notification-sound" src="sounds/notification.wav" preload="preload"></audio><div id="clickcatcher"></div><ul id="notifications"><li id="no-notif-msg">');
+buf.push('<a id="notifications-toggle"><span class="backcolor"></span><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="icon icon--notification"><use xlink:href="img/sprites.svg#icon-notification"></use></svg><span id="notifications-counter"></span></a><audio id="notification-sound" src="sounds/notification.wav" preload="preload"></audio><div id="clickcatcher"></div><ul id="notifications"><li id="no-notif-msg">');
 var __val__ = t('you have no notifications')
 buf.push(escape(null == __val__ ? "" : __val__));
 buf.push('</li><li id="dismiss-all" class="btn">');

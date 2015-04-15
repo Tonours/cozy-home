@@ -1,0 +1,61 @@
+// ==========================================================================
+// Main menu
+// ==========================================================================
+
+
+
+// Menu structure
+// ==========================================================================
+
+.menu--home
+    position: fixed
+    z-index: 50
+    right: 0
+  
+.menu__item
+    height: 52px
+    opacity: .3
+    margin: 0
+    padding: 0
+    border-radius: 5px 0 0 5px
+    color: white
+    font-weight: normal
+    color: orange - 50%
+    padding: 0 0 10px 10px
+    display: block
+    
+    &:hover
+        background: orangewhite - 10%
+        .menu__title
+            display: inline-block
+    &.active,
+    &:hover
+      opacity: 1
+            
+.menu__title
+    font-size: 24px
+    display: none
+    color: darkblue
+    vertical-align: middle
+    
+.menu__icon
+    width: 32px;
+    margin: 10px;
+    color: black
+    &:hover
+        cursor: pointer
+
+.menu__icon
+    display: inline-block
+    vertical-align: middle
+
+    
+// Icons variations
+// ==========================================================================
+
+.menu__icon--app-config
+  position: relative
+  left: 2px // to align with other icons
+
+.menu__icon--logout
+    display: none // Hide icon if width > 500px
