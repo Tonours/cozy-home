@@ -1742,7 +1742,7 @@ body {
   margin-right: 15px;
 }
 #notifications-container a {
-  color: #fff;
+  color: #363a46;
 }
 #notifications-container #notifications-toggle.highlight {
   opacity: 1;
@@ -2219,6 +2219,7 @@ body {
   filter: alpha(opacity=30);
   margin: 10px 5px;
   display: none;
+  color: #000;
 }
 #market-view #no-app-message .img-btn:hover,
 .cozy-app .img-btn:hover {
