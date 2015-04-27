@@ -4,7 +4,8 @@
           use(xlink:href="img/sprites.svg#icon-github")
     if app.website !== undefined
         a(href="#{app.website}")
-            img(src="img/link.png").img-btn
+          svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="img-btn")
+            use(xlink:href="img/sprites.svg#icon-link")
 .app-img.left
     img(src="#{app.icon}")
 

@@ -2870,7 +2870,7 @@ if ( app.website !== undefined)
 {
 buf.push('<a');
 buf.push(attrs({ 'href':("" + (app.website) + "") }, {"href":true}));
-buf.push('><img src="img/link.png" class="img-btn"/></a>');
+buf.push('><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="img-btn"><use xlink:href="img/sprites.svg#icon-link"></use></svg></a>');
 }
 buf.push('</div><div class="app-img left"><img');
 buf.push(attrs({ 'src':("" + (app.icon) + "") }, {"src":true}));
