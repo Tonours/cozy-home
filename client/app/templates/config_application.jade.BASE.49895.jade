@@ -1,4 +1,3 @@
-.md-overlay
 .clearfix
     span.left
         strong #{app.displayName}
@@ -12,10 +11,9 @@
                 | #{app.state}
         if app.needsUpdate
             span &nbsp;
-            svg(viewBox="0 0 120 120", xmlns="http://www.w3.org/2000/svg", class="update-notification-icon")
-                use(xlink:href="img/sprites.svg#icon-notification")
-
-            
+            img.update-notification-icon(
+                width=16, src="img/notification-orange.png",
+                title="#{t('update required')}", alt="#{t('update required')}")
 
     .buttons.right
         span.smaller
@@ -40,6 +38,5 @@
 
     .comments
         if app.comment === 'official application'
-            svg(viewBox="0 0 120 120", xmlns="http://www.w3.org/2000/svg", width="20")
-                use(xlink:href="img/sprites.svg#icon-happycloud")
+            img(src="img/happycloud-black.svg", alt="#{t(app.comment)}", width="20")
         a(href="#{app.website}")= app.website

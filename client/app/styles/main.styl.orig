@@ -230,11 +230,28 @@ body
 
     &:hover
         background: rgba(220, 220, 222, 0.3)
+<<<<<<< HEAD
     .active &
         background: rgba(20, 20, 22, 0.3)
         margin-top: 0
         cursor: pointer
         box-shadow: inset 2px 2px 2px #000
+=======
+
+#notifications-toggle.highlight
+    img
+        opacity: 1
+
+.active
+    #notifications-toggle
+        background rgba(20, 20, 22, 0.3)
+        //height: 47px
+        //line-height: 47px
+        //font-size: 47px
+        margin-top 0
+        cursor pointer
+        box-shadow inset 2px 2px 2px #000
+>>>>>>> upstream/master
         .backcolor
             display none
 
@@ -245,6 +262,9 @@ body
     margin-right 15px
 
     a
+<<<<<<< HEAD
+        color: white
+=======
         color darkblue
 
     #notifications-toggle.highlight
@@ -253,6 +273,7 @@ body
     .notification
         a
             opacity 1
+>>>>>>> upstream/master
 
     .badge
         padding 1px 2px 1px 3px

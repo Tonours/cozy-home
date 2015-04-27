@@ -28,10 +28,10 @@ module.exports = class MainRouter extends Backbone.Router
 
     selectIcon: (index) ->
         unless index is -1
-            $('.menu-btn.active').removeClass 'active'
-            $($('.menu-btn').get(index)).addClass 'active'
+            $('.menu__item.active').removeClass 'active'
+            $($('.menu__item').get(index)).addClass 'active'
         else # no active button
-            $('.menu-btn.active').removeClass 'active'
+            $('.menu__item.active').removeClass 'active'
 
         # dirty trick to prevent the custom menu to stay when doing:
         # custom view => random view => display application list

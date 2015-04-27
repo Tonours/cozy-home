@@ -40,6 +40,13 @@
 
     .comments
         if app.comment === 'official application'
+<<<<<<< HEAD
             svg(viewBox="0 0 120 120", xmlns="http://www.w3.org/2000/svg", width="20")
                 use(xlink:href="img/sprites.svg#icon-happycloud")
         a(href="#{app.website}")= app.website
+=======
+            img(src="img/happycloud-black.svg", 
+                alt="#{t(app.comment)}", 
+                width="20")
+        a(href="#{app.website}", target="_blank")= app.website
+>>>>>>> upstream/master
