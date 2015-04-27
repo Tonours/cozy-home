@@ -2983,7 +2983,7 @@ buf.push('<div class="md-content"><div class="md-header clearfix"><div class="li
 buf.push(attrs({ 'href':("" + (model.git) + ""), "class": ('repo-stars') }, {"href":true}));
 buf.push('>&nbsp;</a><a');
 buf.push(attrs({ 'href':("" + (model.git) + "") }, {"href":true}));
-buf.push('><img src="img/star-white.png"/></a></div></div>');
+buf.push('><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="img/sprites.svg#icon-star"></use></svg></a></div></div>');
 if ( (model.comment !== 'official application'))
 {
 buf.push('<div class="line noncozy-warning"><i class="fa fa-info-circle"></i><span>');

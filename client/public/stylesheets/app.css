@@ -2535,7 +2535,8 @@ body {
   margin-bottom: 0px;
   margin-top: 10px;
 }
-.md-header img {
+.md-header img,
+.md-header svg {
   width: 32px;
 }
 .md-header span {

@@ -5,7 +5,9 @@
             .right
                 a(href="#{model.git}").repo-stars &nbsp;
                 a(href="#{model.git}")
-                    img(src="img/star-white.png")
+                    svg(viewBox="0 0 32 32", xmlns="http://www.w3.org/2000/svg", class="icon")
+                        use(xlink:href="img/sprites.svg#icon-star")
+                    //- img(src="img/star-white.png")
         if (model.comment !== 'official application')
             .line.noncozy-warning
                 i.fa.fa-info-circle
